@@ -3,29 +3,29 @@ package example.com.listproject.data.pojo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Message implements Parcelable{
+public class Mensaje implements Parcelable{
     private String autor;
     private String mensaje;
 
-    public Message(String autor, String mensaje) {
+    public Mensaje(String autor, String mensaje) {
         this.autor = autor;
         this.mensaje = mensaje;
     }
 
-    protected Message(Parcel in) {
+    protected Mensaje(Parcel in) {
         autor = in.readString();
         mensaje = in.readString();
     }
 
-    public static final Creator<Message> CREATOR = new Creator<Message>() {
+    public static final Creator<Mensaje> CREATOR = new Creator<Mensaje>() {
         @Override
-        public Message createFromParcel(Parcel in) {
-            return new Message(in);
+        public Mensaje createFromParcel(Parcel in) {
+            return new Mensaje(in);
         }
 
         @Override
-        public Message[] newArray(int size) {
-            return new Message[size];
+        public Mensaje[] newArray(int size) {
+            return new Mensaje[size];
         }
     };
 
